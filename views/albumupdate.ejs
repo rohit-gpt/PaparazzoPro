@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/newalbum.css">
+        <title>PaparazzoPro: <%= studio.name %> - Update - <%= album.name%></title>
+        <% include partials/links %>
+    </head>
+    <body>
+        
+        <% include partials/navbar %>
+        
+        <div class="container">
+        <h1><strong>Update Album - <%= album.name %></strong></h1>
+        <br>
+        <form action="/users/<%= studio._id %>/albums/<%= album._id %>?_method=PUT" method="POST">
+            <fieldset>
+                <legend>Event Name</legend>
+                <input type="text" name="album[name]" placeholder="event name" value="<%= album.name %>">
+                <br><br>
+                <legend>Event Date - (Please enter the same date if there is no change in date)</legend>
+                <input name="album[date]" type="date" value="<%= album.date %>">
+                <br><br>
+                <legend>Venue</legend>
+                <input type="text" name="album[venue]" placeholder="venue" value="<%= album.venue %>">
+                <br><br>
+<!--
+                <legend>Select All The Images To Be Uploaded</legend>
+                <input type="file" multiple>
+-->
+                <!-- <br><br>
+                <legend>Cover Photo URL</legend>
+                <input type="text" name="cover" placeholder="image url"> -->
+                <!-- <input type="file" name="myImage"> -->
+            </fieldset>
+            <br>
+            <button type="submit" class="btn btn-lg btn-success">Update Album</button>
+        </form>
+        </div>
+        <br>
+
+        <% include partials/footer %>
+
+

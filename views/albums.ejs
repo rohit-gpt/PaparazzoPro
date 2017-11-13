@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/links %>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="/stylesheets/albums.css">
+        <title>PaparazzoPro: <%= studio.name %> - Albums</title>
+</head>
+
+<body>
+
+    <% include partials/navbar %>
+
+        <div class="container">
+            <h1><%= studio.name %></h1>
+        </div>
+
+        <% studio.albums.forEach(function(album){ %>
+
+
+            <div class="container">
+                <h3>
+                    <%= album.name %> - <%= album.date.toDateString() %>
+                </h3>
+                <div class="row">
+
+                    <% if(album.photos.length<5) { %>
+                        <% album.photos.forEach(function(photo) { %>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <img src="<%= photo.url %>" class="thumbnail img-responsive center-block">
+                            </div>
+                        <% }); %>
+                    <% } else { %>    
+                        <% for(var i=0;i<4;i++) { %>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <img src="<%= album.photos[i].url %>" class="thumbnail img-responsive center-block">
+                            </div>
+                        <% } %>
+                    <% } %>
+                </div>
+                <center><a class="btn btn-link" href="/users/<%= studio._id %>/albums/<%= album._id %>">View Full Album...</a></center>
+
+            </div>
+
+
+        <% }); %>
+
+    <% include partials/footer %>

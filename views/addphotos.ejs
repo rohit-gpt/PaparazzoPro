@@ -1,0 +1,10 @@
+<h1>Add Photos to <%= album.name %></h1>
+
+<form action="/users/<%= studio._id %>/albums/<%= album._id %>" method="POST">
+
+<label>URL: </label>
+<input type="text" placeholder="picture url" name="newphoto[url]">
+
+<input type="submit">
+
+</form>

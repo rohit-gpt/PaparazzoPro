@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include partials/links %>
+        <link rel="stylesheet" href="/stylesheets/photos.css">
+        <title>PaparazzoPro: <%= album.name %></title>
+        <style>
+            #deleteform {
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <% include partials/navbar %>
+        
+        <div class="container">
+            <div class="jumbotron">
+                <h1><%= album.name %></h1>
+                <h4><%= album.date.toDateString() %> @ <%= album.venue %></h4>
+                <h5>Album Key: <%= album._id %></h5>
+                <br><br><br>
+                <div class="well">
+                    <% album.photos.forEach(function(picture) { %>
+                        <img class="rounded float-left img-thumbnail" id="mdPhoto" src="<%= picture.url %>">
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+        
+        <% include partials/footer %>

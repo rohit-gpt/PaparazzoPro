@@ -1,0 +1,20 @@
+#brand {
+  font-family: 'Pacifico';
+  font-size: 150%;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+body {
+  text-shadow: #CCC 1px 0 10px;
+  color: #333333;
+  z-index: -1;
+}
+
+body, body * {
+    font-family: "merriweather";
+}
+
+input[type="text"] {
+    width: 50%;
+}

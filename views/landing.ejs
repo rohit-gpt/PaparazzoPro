@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/links %>
+    <link rel="stylesheet" href="/stylesheets/landing.css">
+    <title>PaparazzoPro:The Pupil Of Every Event!</title>
+  </head>
+  <body>
+
+    <% include partials/navbar %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <center>
+            <h1 style="font-weight:bold;">For Guests</h1>
+            <form action="/albums" method="POST">
+              <div class="form-group">
+                <label>Album Key</label>
+                <input type="text" class="form-control width" name="albumId" placeholder="album key">
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </form>
+          </center>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <center>
+            <h1 style="font-weight:bold">For Photographers</h1>
+            <h3>New to <span id="brand">PaparazzoPro</span> ???</h3>
+            <h4 id="lineheight">Don't Worry... It is as easy as capturing the world through your lens!</h4>
+            <h2>Register Yourself</h2>
+            <h3>*It's Free And Will Always Be*</h3>
+            <hr class="style-four">
+            <form action="/register" method="POST">
+              <div class="form-group">
+                <label>Studio Name</label>
+                <input type="text" class="form-control" name="name" placeholder="studio name">
+              </div>
+              <div class="form-group">
+                <label>Email ID</label>
+                <input type="email" class="form-control" name="username" placeholder="email ID">
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password" placeholder="password">
+              </div>
+              <!-- <div class="form-group">
+                <label>Set A Password For Your Account</label>
+                <input type="password" class="form-control" placeholder="password">
+              </div>
+              <div class="form-group">
+                <label>Re-enter Password</label>
+                <input type="password" class="form-control" placeholder="re-enter password">
+              </div> -->
+              <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </form>
+          </center>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+<% include partials/footer.ejs %>

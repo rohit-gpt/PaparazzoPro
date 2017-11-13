@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/newalbum.css">
+        <title>PaparazzoPro: <%= studio.name %> - Update</title>
+        <% include partials/links %>
+    </head>
+    <body>
+        
+        <% include partials/navbar %>
+        
+        <div class="container">
+        <h1><strong>Edit Profile</strong></h1>
+        <br>
+        <form action="/users/<%= studio._id %>?_method=PUT" method="POST">
+            <fieldset>
+                <legend>Studio Name</legend>
+                <input type="text" name="studio[name]" placeholder="studio name" value="<%= studio.name %>">
+                <br><br>
+                <legend>Address</legend>
+                <input name="studio[address]" type="text" placeholder="address" value="<%= studio.address %>">
+                <br><br>
+                <legend>Mobile Number</legend>
+                <input type="text" name="studio[phone]" placeholder="mobile number" value="<%= studio.phone %>">
+                <br><br>
+<!--
+                <legend>Select All The Images To Be Uploaded</legend>
+                <input type="file" multiple>
+-->
+                <!-- <br><br>
+                <legend>Cover Photo URL</legend>
+                <input type="text" name="cover" placeholder="image url"> -->
+                <!-- <input type="file" name="myImage"> -->
+            </fieldset>
+            <br>
+            <button type="submit" class="btn btn-lg btn-success">Update Profile</button>
+        </form>
+        </div>
+        <br>
+
+        <% include partials/footer %>
+
+

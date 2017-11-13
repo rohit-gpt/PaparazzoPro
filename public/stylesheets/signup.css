@@ -1,0 +1,27 @@
+#brand {
+  font-family: 'Pacifico';
+  font-size: 150%;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+body {
+  background-image: url("photo-studio-1761862.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;    
+  z-index: -1;
+}
+
+.col-xs-6 {
+    border: 20px solid black;
+    border-radius: 15px;
+    z-index: 10;
+    font-family: "merriweather";
+    text-shadow: #CCC 1px 0 10px;
+    color: #333333;
+}
+
+label {
+    font-size: 18px;
+}

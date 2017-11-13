@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/links %>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="/stylesheets/profile.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+
+        <title>PaparazzoPro: <%= studio.name %></title>
+</head>
+
+<body>
+    <% include partials/navbar %>
+        <div class="container">
+            <center>
+                <h1><%= studio.name %></h1>
+                <h6>Address: <%= studio.address %></h6>
+                <h6>Contact: <%= studio.phone %></h6>
+                <h6>Email ID: <%= studio.username %></h6>
+                <br>
+                <a class="btn" style="background-color: #f2b246;" href="/users/<%= studio._id %>/edit">Edit Profile</a>
+                <br><br><br>
+
+                <div class="carousel">
+                    <h4>Your Albums</h4>
+                    <p style="text-shadow: none;">*Precision Scrolling*</p>
+                    <% studio.albums.forEach(function(album) { %>
+                        <a class="carousel-item" href="/users/<%= studio._id %>/albums/<%= album._id %>"><img id="gallery" src="<%= album.photos[0].url %>"><center><p id="date"><%= album.date.toDateString() %></p></center></a>   
+                    <% }); %>
+                </div>
+
+                <div class="fixed-action-btn toolbar">
+                    <a class="btn-floating btn-large red">
+                        <i class="large material-icons fa fa-info"></i>
+                    </a>
+                    <ul>
+                        <li class="waves-effect waves-light"><a href="/users/<%= studio._id %>/albums"><i class="material-icons fa fa-eye fa-lg"> View All Albums</i></a></li>
+                        <li class="waves-effect waves-light"><a href="/users/<%= studio._id %>/albums/new"><i class="material-icons fa fa-upload fa-lg"> Make A New Album</i></a></li>
+                    </ul>
+                </div>
+                <br><br>
+            </center>
+        </div>
+        <% include partials/footer %>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+            <script src="/javascripts/profile.js"></script>

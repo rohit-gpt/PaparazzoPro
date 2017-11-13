@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nuptials: Create A New Account</title>
+        <link rel="stylesheet" href="/stylesheets/signup.css">
+        <% include partials/links %>
+    </head>
+    <body>
+        
+        <% include partials/navbar %>
+        
+        <div class="row">
+            <div class="col-xs-1">
+            </div>
+            <div class="col-xs-6">
+                <center>
+                    <h1>Create A New Account</h1>
+                    <h3>It's Free And Will Always Be!</h3>
+                    <form action="/register" method="POST">
+                      <div class="form-group">
+                        <label>Name Of The Studio</label>
+                        <input type="text" class="form-control" name="name" placeholder="studio name">
+                      </div>
+                      <div class="form-group">
+                        <label>Email ID</label>
+                        <input type="email" class="form-control" name="username" placeholder="email">
+                      </div>
+                      <div class="form-group">
+                        <label>Set A Password For Your Account</label>
+                        <input type="password" class="form-control" name="password" placeholder="password">
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </form>
+                    <br>
+                </center>
+            </div>
+        </div>
+        
+        <% include partials/footer %>

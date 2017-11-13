@@ -1,0 +1,36 @@
+html,body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#brand {
+  font-family: 'Pacifico';
+  font-size: 150%;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+body {
+  font-family: "merriweather";
+  text-shadow: #CCC 1px 0 10px;
+  color: #333333;
+  background-image: url("wedding-1594957.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: -1;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+label {
+  font-size: 18px;
+}
+
+div.col-xs-4 {
+  margin: 50px 0 50px 0;
+  border: 1px solid black;
+  border-radius: 15px;
+}

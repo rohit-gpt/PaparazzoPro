@@ -1,0 +1,28 @@
+#brand {
+  font-family: 'Pacifico';
+  font-size: 150%;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+body {
+  font-family: "merriweather";
+  text-shadow: #CCC 1px 0 10px;
+  color: white;
+  z-index: -1;
+  background: black;
+}
+
+h1 {
+  font-family: "Montserrat Subrayada";
+}
+
+div.carousel {
+    -webkit-box-shadow: 0px 0px 20px 25px rgba(255,255,255,0.5);
+    -moz-box-shadow: 0px 0px 20px 25px rgba(255,255,255,0.5);
+    box-shadow: 0px 0px 20px 25px rgba(255,255,255,0.5);
+}
+
+#date {
+    text-shadow: none;
+}
